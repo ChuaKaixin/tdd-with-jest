@@ -6,11 +6,15 @@ const account = {
   },
 
   deposit(amount) {
-    this.balance = this.balance + amount;
+    if(this.balance <  5000) {
+      this.balance = this.balance + amount;
+    }
   },
 
   withdraw(amount) {
-    this.balance = this.balance - amount;
+    if(this.balance > 0) {
+      this.balance = this.balance - amount;
+    }
   },
 };
 
